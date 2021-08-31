@@ -1,0 +1,31 @@
+.how-it-works {
+  margin-top: 15em;
+  margin-left: 18em;
+}
+
+.how-it-works__h1 {
+  font-size: 30px;
+}
+
+.how-it-works__mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #F97153;
+  color: #fff;
+  font-size: 25px;
+}
+
+.how-it-works__box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.how-it-works__p {
+  font-size: 30px;
+  margin-left: 1em;
+  font-weight: 500;
+}

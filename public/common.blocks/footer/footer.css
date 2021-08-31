@@ -1,0 +1,36 @@
+.footer {
+  display: grid;
+  justify-content: center;
+  grid-template: auto / minmax(10em, 20em) minmax(10em, 20em) minmax(10em, 20em);
+  grid-gap: 1em;
+  padding-bottom: 2em;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__img {
+  width: 50px;
+  height: 60px;
+}
+
+.footer__h2 {
+  font-weight: 500;
+}
+
+.footer__h3 {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.footer__a {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.footer__strong {
+  font-weight: 700;
+}

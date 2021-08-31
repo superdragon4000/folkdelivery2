@@ -1,0 +1,38 @@
+.features {
+  box-sizing: border-box;
+}
+
+.features-box {
+  box-sizing: border-box;
+  display: grid;
+  grid-template: auto / minmax(5em, 20em) minmax(5em, 20em) minmax(5em, 20em);
+  padding: 1em;
+  grid-gap: 1em;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0px 5px 144px 2px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 70em;
+  position: absolute;
+  top: 54em;
+  background-color: #fff;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.features__img {
+  width: 10em;
+  height: 10em;
+}
+
+.features__h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.features__p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #686868;
+}

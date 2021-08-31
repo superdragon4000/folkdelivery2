@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="project.css">
+  <script src="library.blocks/login/login.js"></script>
+  <script src="project.js"></script>
+  <title>Folkdelivery - выгодная отправка посылок</title>
+</head>
+<body class="body">
+  <div class="login" id="login-box">
+    <div class="login-box">
+      <div class="login-header">
+        <input type="button" class="tablinks login-header-tab__btn login-header-tab__btn--login" onclick="openTab(event, 'login')" id="loginOpen" value="Войти">
+        <input type="button" class="tablinks login-header-tab__btn login-header-tab__btn--reg" onclick="openTab(event, 'reg')" id="regOpen" value="Регистрация">
+      </div>
+      <div id="login" class="tabcontent">
+        <h3 class="login__h3">Введите номер телефона и пароль чтобы войти</h3>
+        <%  if (messages.error) { %>
+          <%= messages.error %>
+        <% } %>
+        <form action="/login" method="POST" class="login__form">
+          <label for="phone">Номер телефона</label>
+          <input type="tel" name="phone" id="phone" class="login__input" placeholder="8900-777-77-77" required>
+          <label for="password">Пароль</label>
+          <input type="password" name="password" id="password" class="login__input" placeholder="Пароль" required>
+          <input class="button" type="submit" value="Войти">
+          <a href="#" class="__a">Забыли пароль?</a>
+        </form>
+      </div>
+      <div id="reg" class="tabcontent">
+        <h3 class="login__h3">Введите номер телефона и пароль чтобы зарегистрироваться</h3>
+        <form action="/register" method="POST" class="login__form">
+          <label for="name_reg">Ваше имя и фамилия</label>
+          <div class="login__name"><input type="text" name="name_reg" id="name_reg" class="login__input" placeholder="Имя" required><input type="text" class="login__input" placeholder="Фамилия"></div>
+          <label for="phone_reg">Номер телефона</label>
+          <input type="tel" name="phone_reg" id="phone_reg" class="login__input" placeholder="8900-777-77-77" required>
+          <label for="password_reg">Пароль</label>
+          <input type="password" name="password_reg" id="password_reg" class="login__input" placeholder="Пароль" required>
+          <input class="button" type="submit" value="Регистрация">
+        </form>
+      </div>
+    </div>
+  </div>
+  <header class="header header-login">
+    <div class="logo"><span class="logo-folk">Folk</span><span class="logo-delivery">delivery</span></div>
+    <div>
+      <a href="#" class="__a" onclick="regOpen()">Зарегистрироваться</a>
+      <input class="button" type="button" onclick="loginOpen()" value="Войти">
+    </div>
+  </header>
+  <main>
+    <article class="description">
+      <h1 class="description__h1">Выгодная отправка посылок <strong class="description__strong">в любой город</strong> страны</h1>
+      <img src="common.blocks/description/car_map.svg" class="description__bg" alt="Car Map">
+    </article>
+    <article class="features">
+      <div class="features-box">
+        <section class="features-section">
+          <img src="common.blocks/features/money.svg" class="features__img" alt="money" title="Money">
+          <h2 class="features__h2">Это выгодно</h2>
+          <p class="features__p">В обе стороны: водитель экономит на топливе, отпр-ль на ценах обычной почты</p>
+        </section>
+        <section class="features-section">
+          <img src="common.blocks/features/cargo.svg" class="features__img" alt="Cargo" title="Cargo">
+          <h2 class="features__h2">Быстро</h2>
+          <p class="features__p">Посылка едет напрямую в место назначения</p>
+        </section>
+        <section class="features-section">
+          <img src="common.blocks/features/trusted.svg" class="features__img" alt="Trusted" title="Trusted">
+          <h2 class="features__h2">Доверенные люди</h2>
+          <p class="features__p">Для вас мы проверяем документы пользователей</p>
+        </section>
+      </div>
+    </article>
+    <article class="how-it-works">
+      <h1 class="how-it-works__h1">Как это работает?</h1>
+      <div class="how-it-works__box">
+        <span class="how-it-works__mark">1</span>
+        <p class="how-it-works__p">Публикуете свою поездку</p>
+      </div>
+      <div class="how-it-works__box">
+        <span class="how-it-works__mark">2</span>
+        <p class="how-it-works__p">Забираете посылку у отправителей</p>
+      </div>
+      <div class="how-it-works__box">
+        <span class="how-it-works__mark">3</span>
+        <p class="how-it-works__p">Передаете посылку получателю и получаете деньги</p>
+      </div>
+    </article>
+    <article class="feedback">
+      <h1 class="feedback__h1">Что говорят наши пользователи?</h1>
+      <video class="feedback__video" autoplay muted loop>
+        <source src="common.blocks/feedback/feedback-video.mp4" type="video/mp4">
+      </video>
+      <section class="feedback__section">
+        <div class="feedback-person">
+          <img src="common.blocks/feedback/avatar.jpg" class="feedback__img" alt="avatar" title="Avatar">
+          <div class="feedback-name">
+            <h3 class="feedback__h3">Иван Иванов</h3>
+            <p class="feedback__p">житель г. Ижевск</p>
+          </div>
+          <img src="common.blocks/feedback/stars.svg" class="feedback__stars" alt="stars">
+        </div>
+        <q class="feedback__q">Отличный сервис! Нужно было срочно отправить телефон брату в Сарапул. Нашел человека и отправил. Пришло за пару часов.<br>Спасибо!</q>
+      </section>
+    </article>
+    <article class="start">
+      <div class="start-box">
+        <h1 class="start__h1">Начать можно прямо <strong class="start__strong">сейчас!</strong></h1>
+        <input class="button" type="button" onclick="loginOpen()" value="Войти">
+        <a href="#" class="__a" onclick="regOpen()">Зарегистрироваться</a>
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <section class="footer-section">
+      <div class="logo"><span class="logo-folk">Folk</span><span class="logo-delivery">delivery</span></div>
+      <h2 class="footer__h2">Выгодная отправка посылок <strong class="footer__strong">в любой город</strong> страны</h2>
+      <p class="copyright">Copyright © Ильгизар Исмакаев</p>
+      <div class="social">
+        <a href="#" class="footer-social__a"><img src="common.blocks/footer/instagram.svg" class="footer__img" alt="Instagram" title="Instagram" /></a>
+        <a href="#" class="footer-social__a"><img src="common.blocks/footer/facebook.svg" class="footer__img" alt="Facebook" title="Facebook" /></a>
+        <a href="#" class="footer-social__a"><img src="common.blocks/footer/twitter.svg" class="footer__img" alt="Twitter" title="Twitter" /></a>
+      </div>
+    </section>
+    <section class="footer-section">
+      <h3 class="footer__h3">Компания</h3>
+      <a href="#" class="__a footer__a">О нас</a>
+      <a href="#" class="__a footer__a">Как это работает?</a>
+      <a href="#" class="__a footer__a">Вакансии</a>
+      <a href="#" class="__a footer__a">Блог</a>
+    </section>
+    <section class="footer-section">
+      <h3 class="footer__h3">Поддержка</h3>
+      <a href="#" class="__a footer__a">Помощь/FAQ</a>
+      <a href="#" class="__a footer__a">Документация</a>
+      <a href="#" class="__a footer__a">Правовая информация</a>
+      <a href="#" class="__a footer__a">Руководство</a>
+    </section>
+  </footer>
+</body>
+</html>

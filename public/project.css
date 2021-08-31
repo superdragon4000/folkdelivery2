@@ -1,0 +1,26 @@
+@import "library.blocks/fonts/fonts.css";
+@import "library.blocks/logo/logo.css";
+@import "library.blocks/button/button.css";
+@import "library.blocks/a/a.css";
+@import "library.blocks/login/login.css";
+@import "common.blocks/header/header.css";
+@import "common.blocks/description/description.css";
+@import "common.blocks/features/features.css";
+@import "common.blocks/how-it-works/how-it-works.css";
+@import "common.blocks/feedback/feedback.css";
+@import "common.blocks/start/start.css";
+@import "common.blocks/footer/footer.css";
+@import "common.blocks/banner/banner.css";
+@import "common.blocks/rides/rides.css";
+
+.html {
+  box-sizing: border-box;
+}
+
+.body {
+  display: grid;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+  grid-template: auto / 80%;
+}

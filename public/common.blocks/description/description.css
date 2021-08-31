@@ -1,0 +1,24 @@
+.description {
+  display: flex;
+  justify-content: center;
+}
+
+.description__bg {
+  width: 80%;
+  height: 50em;
+  z-index: -1;
+}
+
+.description__h1 {
+  position: absolute;
+  padding-left: 18em;
+  padding-top: 1.5em;
+  font-weight: 500;
+  font-size: 40px;
+  width: 8em;
+  text-align: end;
+}
+
+.description__strong {
+  font-weight: 700;
+}

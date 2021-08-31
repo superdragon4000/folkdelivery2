@@ -1,0 +1,31 @@
+.start {
+  background-image: url(camper.svg);
+  background-position: center;
+  min-height: 40em;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.start-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  align-items: center;
+  left: 54%;
+  transform: (-50%, 0);
+}
+
+.start-box > .__a {
+  margin-top: 1em;
+}
+
+.start__h1 {
+  font-weight: 500;
+  font-size: 40px;
+  text-align: right;
+}
+
+.start__strong {
+  font-weight: 700;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="library.blocks/login/login.js"></script>
+  <script src="common.blocks/banner/banner.js"></script>
+  <link rel="stylesheet" href="project.css">
+  <script src="project.js"></script>
+  <title>Folkdelivery - выгодная отправка посылок</title>
+</head>
+<body class="body">
+  <header class="header header-login">
+    <div class="logo"><span class="logo-folk">Folk</span><span class="logo-delivery">delivery</span></div>
+    <div>
+      <h1>Hi <%= name %> </h1>
+    </div>
+  </header>
+  <main>
+    <article class="banner">
+      <div class="banner-box">
+        <div class="banner-header">
+          <input type="button" class="login-header-tab__btn login-header-tab__btn--login" onclick="openTab(event, 'find-ride')" id="defaultClick" value="Найти поездку">
+          <input type="button" class="login-header-tab__btn login-header-tab__btn--reg" onclick="openTab(event, 'create-ride')" value="Создать поездку">
+        </div>
+        <div class="tabcontent" id="find-ride">
+          <form action="" class="banner__form">
+            <div class="banner__form-section">
+              <label for="">Откуда</label>
+              <input type="text" name="" class="login__input" required placeholder="Откуда" id="">
+              <label for="">Куда</label>
+              <input type="text" name="" class="login__input" required placeholder="Куда" id="">
+            </div>
+            <div class="banner__form-section">
+              <label for="">Дата</label>
+              <input type="text" name="" class="login__input" required placeholder="Дата" id="">
+              <label for="">Время</label>
+              <input type="text" name="" class="login__input" placeholder="Время" id="">
+            </div>
+            <div class="banner__form-section">
+              <label for="">Авто</label>
+              <select class="__select" name="" id="">
+                <option value="sedan">Седан</option>
+                <option value="minivan">Минивэн</option>
+                <option value="hatchback">Хэтчбэк</option>
+                <option value="cargo">Грузовая</option>
+                <option value="truck">Пикап</option>
+              </select>
+              <label for="">Стоимость</label>
+              <input type="text" name="" class="login__input" placeholder="Стоимость" id="">
+            </div>
+            <input type="submit" class="button" value="Найти">
+          </form>
+        </div>
+        <div class="tabcontent" id="create-ride">
+          <form action="" class="banner__form">
+            <div class="banner__form-section">
+              <label for="">Откуда</label>
+              <input type="text" name="" class="login__input" required placeholder="Откуда" id="">
+              <label for="">Куда</label>
+              <input type="text" name="" class="login__input" required placeholder="Куда" id="">
+            </div>
+            <div class="banner__form-section">
+              <label for="">Дата</label>
+              <input type="text" name="" class="login__input" required placeholder="Дата" id="">
+              <label for="">Время</label>
+              <input type="text" name="" class="login__input" required placeholder="Время" id="">
+            </div>
+            <div class="banner__form-section">
+              <label for="">Авто</label>
+              <select class="__select" name="" required id="">
+                <option value="sedan">Седан</option>
+                <option value="minivan">Минивэн</option>
+                <option value="hatchback">Хэтчбэк</option>
+                <option value="cargo">Грузовая</option>
+                <option value="truck">Пикап</option>
+              </select>
+              <label for="">Стоимость</label>
+              <input type="text" name="" class="login__input" required placeholder="Стоимость" id="">
+            </div>
+            <input type="submit" class="button" value="Создать">
+          </form>
+        </div>
+      </div>
+    </article>
+    <article class="rides">
+      <section class="rides__section">
+        <div class="feedback-person">
+          <img src="common.blocks/feedback/avatar.jpg" class="feedback__img" alt="avatar" title="Avatar">
+          <div class="feedback-name">
+            <h3 class="feedback__h3">Иван Иванов</h3>
+            <div class="rides-fb-box">
+              <img src="common.blocks/feedback/stars.svg" class="feedback__stars rides__stars" alt="stars">
+              <span>5,0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="rides__section">
+        <div class="feedback-person">
+          <img src="common.blocks/feedback/avatar.jpg" class="feedback__img" alt="avatar" title="Avatar">
+          <div class="feedback-name">
+            <h3 class="feedback__h3">Иван Иванов</h3>
+            <div class="rides-fb-box">
+              <img src="common.blocks/feedback/stars.svg" class="feedback__stars rides__stars" alt="stars">
+              <span>5,0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <section class="footer-section">
+      <div class="logo"><span class="logo-folk">Folk</span><span class="logo-delivery">delivery</span></div>
+      <h2 class="footer__h2">Выгодная отправка посылок <strong class="footer__strong">в любой город</strong> страны</h2>
+      <p class="copyright">Copyright © Ильгизар Исмакаев</p>
+      <div class="social">
+        <a href="#" class="footer-social__a"><img src="common.blocks/footer/instagram.svg" class="footer__img" alt="Instagram" title="Instagram" /></a>
+        <a href="#" class="footer-social__a"><img src="common.blocks/footer/facebook.svg" class="footer__img" alt="Facebook" title="Facebook" /></a>
+        <a href="#" class="footer-social__a"><img src="common.blocks/footer/twitter.svg" class="footer__img" alt="Twitter" title="Twitter" /></a>
+      </div>
+    </section>
+    <section class="footer-section">
+      <h3 class="footer__h3">Компания</h3>
+      <a href="#" class="__a footer__a">О нас</a>
+      <a href="#" class="__a footer__a">Как это работает?</a>
+      <a href="#" class="__a footer__a">Вакансии</a>
+      <a href="#" class="__a footer__a">Блог</a>
+    </section>
+    <section class="footer-section">
+      <h3 class="footer__h3">Поддержка</h3>
+      <a href="#" class="__a footer__a">Помощь/FAQ</a>
+      <a href="#" class="__a footer__a">Документация</a>
+      <a href="#" class="__a footer__a">Правовая информация</a>
+      <a href="#" class="__a footer__a">Руководство</a>
+    </section>
+  </footer>
+</body>
+</html>

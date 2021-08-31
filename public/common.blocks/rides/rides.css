@@ -1,0 +1,24 @@
+.rides {
+  display: grid;
+  grid-template: auto / 68%;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.rides__section {
+  margin-bottom: 3em;
+  background-color: #ECECEC;
+  border-radius: 20px;
+  padding: 2em;
+}
+
+.rides__stars {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.rides-fb-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
